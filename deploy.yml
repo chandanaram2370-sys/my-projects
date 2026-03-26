@@ -1,0 +1,9 @@
+---
+- name: Deploy Maven Artifact
+  hosts: local
+  become: yes
+  tasks:
+    - name: Copy the artifact
+      copy:
+        src: "/home/knsit/hellomaven/hellomaven/target/HelloMaven-1.0-SNAPSHOT.jar"
+        dest: "/opt/deployment/HelloMaven.jar"
